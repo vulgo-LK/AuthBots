@@ -1,0 +1,148 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+label {
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.custom-checkbox {
+  width: 20px;
+  height: 20px;
+  background-color: #d3d3d3;
+  border-radius: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+.custom-checkbox::after {
+  content: '\2713';
+  font-size: 14px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+input[type='checkbox']:checked + .custom-checkbox {
+  background-color: #4caf50;
+}
+
+input[type='checkbox']:checked + .custom-checkbox::after {
+  opacity: 1;
+}
+
+#file-input {
+  margin-bottom: 20px;
+}
+
+#download-link button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#download-link button:hover {
+  background-color: #45a049;
+}
+
+.download-notification {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateX(100%);
+}
+
+.download-notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#logoutButton {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  margin-top: 50px;
+  background-color: #ff0000;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border: none !important;
+  border-radius: 10px;
+  transition: all linear 160ms;
+  cursor: pointer;
+  margin: 0 !important;
+  height: 5vh;
+  z-index: 1001;
+}
+
+#logoutButton:hover {
+  transform: scale(1.05);
+  background-color: #f03a3a;
+}
+
+#logoutButton span {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+#credits {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #666;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  #logoutButton {
+    top: 4rem;
+    right: 5px;
+    height: auto;
+    padding: 5px 10px;
+    font-size: 12px;
+    margin-top: 0;
+  }
+
+  #logoutButton span {
+    display: none;
+  }
+
+  #credits {
+    font-size: 12px;
+  }
+}

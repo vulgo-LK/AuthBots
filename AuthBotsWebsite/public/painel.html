@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FS Community - Painel</title>
+    <link rel="stylesheet" type="text/css" href="style_painel.css" />
+    <link rel="stylesheet" type="text/css" href="navbar.css" />
+    <link rel="shortcut icon" href="DB_Shield_Escudo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!--<nav class="navbar">
+      <div class="logo">FS Community</div>
+      <div class="menu-icon">&#9776;</div>
+      <ul class="nav-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>!-->
+
+    <button id="logoutButton">Sair<span> do painel</span></button>
+    <input type="file" id="file-input" accept=".js" />
+
+    <div id="file-display">
+      <pre id="file-content"></pre>
+    </div>
+
+    <!--<label>
+      <input
+        type="checkbox"
+        name="minhaCaixaDeMarcacao"
+        id="minhaCaixaDeMarcacao"
+        class="hidden-checkbox"
+      />
+      <span class="custom-checkbox"></span>
+      Concordo com os termos de uso!
+    </label>!-->
+
+    <a id="download-link" download="authfile.js">
+      <button>Baixar Arquivo</button>
+    </a>
+
+    <p id="credits">FS Community - Todos os direitos reservados!</p>
+
+    <script src="script_painel.js"></script>
+  </body>
+</html>
