@@ -3,7 +3,7 @@ const axios = require('axios');
 const fs = require('fs');
 const config = require('./config.json');
 
-const APIAuth = 'http://212.18.114.13:30120';
+const APIAuth = 'http://SEUIP:8080';
 let pago = false;
 
 const client = new Discord.Client({
