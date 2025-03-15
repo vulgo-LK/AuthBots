@@ -179,7 +179,7 @@ app.get('/consulta/plano/:licenca', async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 30120;
+const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
